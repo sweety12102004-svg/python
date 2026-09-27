@@ -1,0 +1,374 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "1d307617-3d37-4b3d-bd3b-be6bb96fca04",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "rahul excellent\n",
+      "amit fail\n",
+      "priya good\n",
+      "neha average\n"
+     ]
+    }
+   ],
+   "source": [
+    "students={\"rahul\":85,\"amit\":35,\"priya\":72,\"neha\":48}\n",
+    "for name , marks in students.items():\n",
+    "    if marks>=80:\n",
+    "        print(name,\"excellent\")\n",
+    "    elif marks>=60:\n",
+    "        print(name,\"good\")\n",
+    "    elif marks>=40:\n",
+    "        print(name,\"average\")\n",
+    "    else:\n",
+    "        print(name,\"fail\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "ff62abe6-0efa-4a6c-a8e2-57c50b837354",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "laptop not available\n",
+      "mouse low stock\n",
+      "monitor not available\n",
+      "printer low stock\n"
+     ]
+    }
+   ],
+   "source": [
+    "products={\"laptop\":10,\"mouse\":3,\"monitor\":7,\"printer\":2}\n",
+    "for name,stock in products.items():\n",
+    "    if stock==0:\n",
+    "        print(name,\"out of stock\")\n",
+    "    else: \n",
+    "        if stock<=5:\n",
+    "            print(name,\"low stock\")\n",
+    "        else:\n",
+    "            print(name,\"not available\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "2e6f9434-2182-4cc6-a733-b6a79d849dc0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "rahul senior IT\n",
+      "amit junior employee\n",
+      "priya senior IT\n",
+      "neha junior employee\n"
+     ]
+    }
+   ],
+   "source": [
+    "employee = {\n",
+    "    \"rahul\": {\"salary\": 60000, \"department\": \"IT\"},\n",
+    "    \"amit\": {\"salary\": 40000, \"department\": \"HR\"},\n",
+    "    \"priya\": {\"salary\": 70000, \"department\": \"IT\"},\n",
+    "    \"neha\": {\"salary\": 45000, \"department\": \"Finance\"}\n",
+    "}\n",
+    "\n",
+    "for name, data in employee.items():\n",
+    "    salary = data[\"salary\"]\n",
+    "    department = data[\"department\"]\n",
+    "\n",
+    "    if salary >= 50000:\n",
+    "        if department == \"IT\":\n",
+    "            print(name, \"senior IT\")\n",
+    "        elif department == \"HR\":\n",
+    "            print(name, \"senior HR\")\n",
+    "        else:\n",
+    "            print(name, \"senior employee\")\n",
+    "    else:\n",
+    "        print(name, \"junior employee\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "c9c9754f-04ee-4f5c-98c5-399b57be4303",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10 even\n",
+      "15 odd\n",
+      "25 odd\n",
+      "30 large even\n",
+      "40 large even\n"
+     ]
+    }
+   ],
+   "source": [
+    "data={\"a\":10,\"b\":15,\"c\":25,\"d\":30,\"e\":40}\n",
+    "for name ,value in data.items():\n",
+    "    if value%2==0:\n",
+    "        if value>20:\n",
+    "            print(value,\"large even\")\n",
+    "        elif value<=20:\n",
+    "            print(value,\"even\")\n",
+    "    else:\n",
+    "        print(value,\"odd\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9edc2501-05e9-44ca-b7b1-981ebac599cc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "mobile primium products\n",
+      "mouse affrodable prize\n",
+      "laptop primium products\n",
+      "keyboard expensive products\n"
+     ]
+    }
+   ],
+   "source": [
+    "products={\"mobile\":15000,\"mouse\":500,\"laptop\":60000,\"keyboard\":1200}\n",
+    "for name , price in products.items():\n",
+    "    if price >=1000:\n",
+    "        if price >=5000:\n",
+    "            print(name,\"primium products\")\n",
+    "        else:\n",
+    "            print(name,\"expensive products\")\n",
+    "    else:\n",
+    "        print(name,\"affrodable prize\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "f9f7ad4d-6f0f-4d77-9e7c-a4609b15d092",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "rahul eligible\n",
+      "amit not eligible\n",
+      "priya failed in exam\n",
+      "neha not eligible\n"
+     ]
+    }
+   ],
+   "source": [
+    "students={\n",
+    "    \"rahul\": {\"attendence\": 85,\"marks\":70},\n",
+    "    \"amit\": {\"attendence\": 60,\"marks\":80},\n",
+    "    \"priya\": {\"attendence\": 90,\"marks\":35},\n",
+    "    \"neha\": {\"attendence\": 70,\"marks\":55}\n",
+    "}\n",
+    "for name , data in students.items():\n",
+    "    attendence=data[\"attendence\"]\n",
+    "    marks=data[\"marks\"]\n",
+    "    if attendence >= 75:\n",
+    "        if marks >=40:\n",
+    "            print(name,\"eligible\")\n",
+    "        elif marks <40:\n",
+    "            print(name,\"failed in exam\")\n",
+    "    else:\n",
+    "        print(name,\"not eligible\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "7f5b7f55-b727-4380-aee9-cd5fe5f0a3a1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "rahul primium account\n",
+      "amit regular account\n",
+      "neha regular account\n"
+     ]
+    }
+   ],
+   "source": [
+    "accounts={\"rahul\":25000,\"amit\":5000,\"priya\":0,\"neha\":2000}\n",
+    "for name , data in accounts.items():\n",
+    "    balance=data\n",
+    "    if balance > 0:\n",
+    "        if balance >=10000:\n",
+    "            print(name,\"primium account\")\n",
+    "        elif balance > 0:\n",
+    "            print(name,\"regular account\")\n",
+    "        elif balance == 0:\n",
+    "            print(name,\"no balance\")\n",
+    "        else:\n",
+    "            print(name,\"over draft\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "5c42c982-178c-4f0f-b059-6fc2b97a4a25",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "rahul Distinction\n",
+      "amit Fail\n",
+      "priya Not Eligible\n",
+      "neha Pass\n",
+      "rohit Not Eligible\n"
+     ]
+    }
+   ],
+   "source": [
+    "students = {\n",
+    "    \"rahul\": {\"marks\": 85, \"attendance\": 90},\n",
+    "    \"amit\": {\"marks\": 35, \"attendance\": 80},\n",
+    "    \"priya\": {\"marks\": 65, \"attendance\": 70},\n",
+    "    \"neha\": {\"marks\": 45, \"attendance\": 85},\n",
+    "    \"rohit\": {\"marks\": 90, \"attendance\": 60}\n",
+    "}\n",
+    "\n",
+    "for name, data in students.items():\n",
+    "\n",
+    "    attendance = data[\"attendance\"]\n",
+    "    marks = data[\"marks\"]\n",
+    "\n",
+    "    if attendance < 75:\n",
+    "        print(name, \"Not Eligible\")\n",
+    "\n",
+    "    else:\n",
+    "        if marks >= 80:\n",
+    "            print(name, \"Distinction\")\n",
+    "        elif marks >= 60:\n",
+    "            print(name, \"First Division\")\n",
+    "        elif marks >= 40:\n",
+    "            print(name, \"Pass\")\n",
+    "        else:\n",
+    "            print(name, \"Fail\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "d12970a8-80d0-41b0-a1aa-2b914613a418",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Rahul Senior\n",
+      "Amit Mid-Level\n",
+      "Priya Experienced Junior\n",
+      "Neha Fresher/Junior\n"
+     ]
+    }
+   ],
+   "source": [
+    "employees = {\n",
+    "    \"Rahul\": {\"salary\": 60000, \"experience\": 6},\n",
+    "    \"Amit\": {\"salary\": 55000, \"experience\": 3},\n",
+    "    \"Priya\": {\"salary\": 40000, \"experience\": 4},\n",
+    "    \"Neha\": {\"salary\": 30000, \"experience\": 2}\n",
+    "}\n",
+    "\n",
+    "for name, data in employees.items():\n",
+    "\n",
+    "    salary = data[\"salary\"]\n",
+    "    experience = data[\"experience\"]\n",
+    "\n",
+    "    if salary >= 50000:\n",
+    "        if experience >= 5:\n",
+    "            print(name, \"Senior\")\n",
+    "        else:\n",
+    "            print(name, \"Mid-Level\")\n",
+    "\n",
+    "    else:\n",
+    "        if experience >= 3:\n",
+    "            print(name, \"Experienced Junior\")\n",
+    "        else:\n",
+    "            print(name, \"Fresher/Junior\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "c6d20ae6-8ac2-4e55-8705-8442953c9600",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "rahul pass\n",
+      "amit fail\n",
+      "priya pass\n",
+      "neha fail\n",
+      "rohit pass\n"
+     ]
+    }
+   ],
+   "source": [
+    "student={\"rahul\":75,\"amit\":32,\"priya\":88,\"neha\":39,\"rohit\":55}\n",
+    "for name , marks in student.items():\n",
+    "    if marks>=40:\n",
+    "        print(name,\"pass\")\n",
+    "    else:\n",
+    "        print(name,\"fail\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bc5d341a-f7ed-4ca4-9b16-841c062f7a50",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
